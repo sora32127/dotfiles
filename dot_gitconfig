@@ -1,0 +1,16 @@
+[user]
+	email = sora32127@gmail.com
+	name = contradiction29
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+	ac = !git add -A && aicommits -a
+	sw = !"f(){ git switch -c ${1} main; };f"
+	adb = !git checkout main && git branch | grep -v "main" | xargs git branch -D
+[core]
+	editor = vim
+[init]
+	defaultBranch = main
