@@ -33,3 +33,9 @@ echo source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh >
 # Install zsh-autocomplete
 git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autocomplete
 echo source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh >> ~/.zshrc
+
+# Install chezmoi
+brew install chezmoi
+
+# Apply chezmoi
+chezmoi init --apply sora32127
