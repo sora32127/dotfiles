@@ -7,9 +7,12 @@
 	process = git-lfs filter-process
 	required = true
 [alias]
-	ac = !git add -A && aicommits -a
+	ac = !git add . && git commit
 	sw = !"f(){ git switch -c ${1} main; };f"
-	adb = !git checkout main && git branch | grep -v "main" | xargs git branch -D
+	adb = !git checkout main && git branch | grep -v "main" | xargs git branch -D && git pull origin main
+	po = !git push origin $(git branch --show-current)
+	pof = !git push origin $(git branch --show-current) --force
+	acap = !git add . && git commit --amend --no-edit && git push origin $(git branch --show-current) --force
 [core]
 	editor = vim
 [init]
