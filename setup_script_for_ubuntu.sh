@@ -39,3 +39,6 @@ brew install chezmoi
 
 # Apply chezmoi
 chezmoi init --apply sora32127
+
+# install node
+brew install node
